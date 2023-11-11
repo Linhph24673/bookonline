@@ -1,0 +1,45 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Product A",
+        "author": "Author A",
+        "description": "Description of Product A",
+        "price": 100,
+        "quantity": 10,
+        "image": "image_url_a.jpg",
+        "variantImages": ["variant_image_url_a1.jpg", "variant_image_url_a2.jpg"]
+      },
+      {
+        "id": 2,
+        "name": "Product B",
+        "author": "Author B",
+        "description": "Description of Product B",
+        "price": 200,
+        "quantity": 8,
+        "image": "image_url_b.jpg",
+        "variantImages": ["variant_image_url_b1.jpg", "variant_image_url_b2.jpg"]
+      },
+      {
+        "id": 3,
+        "name": "Product C",
+        "author": "Author C",
+        "description": "Description of Product C",
+        "price": 300,
+        "quantity": 15,
+        "image": "image_url_c.jpg",
+        "variantImages": ["variant_image_url_c1.jpg", "variant_image_url_c2.jpg"]
+      },
+      {
+        "id": 4,
+        "name": "Product D",
+        "author": "Author D",
+        "description": "Description of Product D",
+        "price": 400,
+        "quantity": 5,
+        "image": "image_url_d.jpg",
+        "variantImages": ["variant_image_url_d1.jpg", "variant_image_url_d2.jpg"]
+      }
+    ]
+  }
+  

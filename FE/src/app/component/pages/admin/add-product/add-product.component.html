@@ -1,1 +1,12 @@
-<p>add-product works!</p>
+<form [formGroup]="productForm" (ngSubmit)="AddProduct()">
+    <h2>Thêm sản phẩm</h2>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Tên sản phẩm</label>
+        <input type="text" class="form-control" formControlName="name">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Giá sản phẩm</label>
+        <input type="number" class="form-control" formControlName="price">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -1,1 +1,23 @@
-<p>manager-product works!</p>
+<table class="table table-bordered border-primary">
+    <thead>
+        <tr>
+            <td>stt</td>
+            <td>name</td>
+            <td>price</td>
+            <td>action</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products, let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>
+                <button class="btn btn-danger ms-3" (click)="removeProduct(product.id)">remove</button>
+                <a [routerLink]="['/admin/products',product.id,'update']">
+                    <button class="btn btn-primary ms-3">Update</button>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>

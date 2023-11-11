@@ -9,7 +9,8 @@ import { UpdateProductComponent } from './component/pages/admin/update-product/u
 import { DashboardComponent } from './component/pages/admin/dashboard/dashboard.component';
 import { HomepageComponent } from './component/pages/home/homepage/homepage.component';
 import { AdminlayoutComponent } from './component/layout/adminlayout/adminlayout/adminlayout.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,10 @@ import { AdminlayoutComponent } from './component/layout/adminlayout/adminlayout
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
