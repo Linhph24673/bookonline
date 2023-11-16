@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomepageComponent } from './component/pages/home/homepage/homepage.component';
-import { AdminlayoutComponent } from './component/layout/adminlayout/adminlayout/adminlayout.component';
-import { DashboardComponent } from './component/pages/admin/dashboard/dashboard.component';
-import { ManagerProductComponent } from './component/pages/admin/manager-product/manager-product.component';
-import { AddProductComponent } from './component/pages/admin/add-product/add-product.component';
-import { UpdateProductComponent } from './component/pages/admin/update-product/update-product.component';
+import { ProductListComponent } from './component/pages/admin/product-list/product-list.component';
+import { ProductUpdateComponent } from './component/pages/admin/product-update/product-update.component';
+import { HomePageComponent } from './component/pages/home/home-page/home-page.component';
+import { ProductDetailComponent } from './component/pages/home/product-detail/product-detail.component';
+import { SigninComponent } from './component/pages/home/signin/signin.component';
+import { SignupComponent } from './component/pages/home/signup/signup.component';
+import { ProductAddComponent } from './component/pages/admin/product-add/product-add.component';
 
 const routes: Routes = [
-  {path: '',component:HomepageComponent},
-  {path:'admin',component:AdminlayoutComponent,children:[
-    { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-      { path: 'dashboard', component: DashboardComponent },
-      { path: 'products', component: ManagerProductComponent },
-      { path: 'add', component: AddProductComponent },
-      { path: 'products/:id/edit', component: UpdateProductComponent },
-  ]}
+  {path: "", component: HomePageComponent},
+  {path: "product/:id", component: ProductDetailComponent},
+  {path: "sigin", component: SigninComponent},
+  {path: 'sigup', component: SignupComponent},
+  {path : "admin/productList", component : ProductListComponent},
+  {path : "admin/productList/produdctEdit/:id", component : ProductUpdateComponent},
+  {path : "admin/add", component : ProductAddComponent},
 ];
 
 @NgModule({

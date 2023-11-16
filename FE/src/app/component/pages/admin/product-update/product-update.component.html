@@ -1,0 +1,55 @@
+<section class="bg-gray-100">
+  <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
+      <div class="lg:col-span-2 lg:py-12">
+        <H1 class="text-2xl font-bold text-pink-600">Update Product</H1>
+      </div>
+
+      <div class="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
+        <form [formGroup]="productForm" (ngSubmit)="onHandleEdit()" class="space-y-4">
+          <div>
+            <label class="sr-only">Name</label>
+            <input class="w-full rounded-lg border-gray-200 p-3 text-sm" placeholder="Name" type="text"
+              formControlName="name" />
+          </div>
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div>
+              <label class="sr-only">Author</label>
+              <input class="w-full rounded-lg border-gray-200 p-3 text-sm" placeholder="Athor" type="text"
+                formControlName="author" />
+            </div>
+            <div>
+              <label class="sr-only">Price</label>
+              <input class="w-full rounded-lg border-gray-200 p-3 text-sm" placeholder="Price" type="number"
+                formControlName="price" />
+            </div>
+
+            <div>
+              <label class="sr-only">Description</label>
+              <input class="w-full rounded-lg border-gray-200 p-3 text-sm" placeholder="Description" type="text"
+                formControlName="desc" />
+            </div>
+
+            <div>
+              <label class="sr-only">Image</label>
+              <input class="w-full rounded-lg border-gray-200 p-3 text-sm" placeholder="Image" type="url"
+                formControlName="img" />
+            </div>
+            <div>
+              <label class="sr-only">Categories</label>
+              <input class="w-full rounded-lg border-gray-200 p-3 text-sm" placeholder="Categories" type="number"
+                formControlName="cate" />
+            </div>
+          </div>
+          <p class="text-red-500 text-xs" id="message"></p>
+          <div class="mt-4">
+            <button type="submit"
+              class="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-auto">
+              Save
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
