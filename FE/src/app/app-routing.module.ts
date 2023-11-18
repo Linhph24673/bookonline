@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProductListComponent } from './component/pages/admin/product-list/product-list.component';
-import { ProductUpdateComponent } from './component/pages/admin/product-update/product-update.component';
-import { HomePageComponent } from './component/pages/home/home-page/home-page.component';
-import { ProductDetailComponent } from './component/pages/home/product-detail/product-detail.component';
-import { SigninComponent } from './component/pages/home/signin/signin.component';
-import { SignupComponent } from './component/pages/home/signup/signup.component';
-import { ProductAddComponent } from './component/pages/admin/product-add/product-add.component';
+import { ProductListComponent } from './component/product-list/product-list.component';
+import { ProductUpdateComponent } from './component/product-update/product-update.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { SigninComponent } from './pages/signin/signin.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { ProductAddComponent } from './component/product-add/product-add.component';
 
 const routes: Routes = [
   {path: "", component: HomePageComponent},

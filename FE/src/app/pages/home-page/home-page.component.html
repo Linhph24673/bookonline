@@ -1,0 +1,65 @@
+<div class="max-w-screen-2xl m-auto grid grid-cols-[200px_1fr_250px_150px] gap-7 pt-4">
+    <div>
+        <img class="pt-2" src="../../../assets/img/logo.png" alt="" width="200px">
+    </div>
+    <div>
+        <div>
+            <input [(ngModel)]="searchTerm" class="w-full px-16 pt-3 pb-3 rounded-3xl border border-solid border-red-700 italic text-xl" type="search"
+                placeholder="Search" (input)="searchProduct()">
+            <!-- <button class="rounded-e-3xl text-xl italic hover:bg-cyan-500 bg-red-500" (click)="clearSearch()">Clear</button> -->
+        </div>
+    </div>
+    <div class="flex italic text-xl pt-3 text-center pl-4">
+        <a class="hover:text-pink-400 text-slate-400 pr-1" href="/sigup">Đăng Ký</a>
+        <p class="text-slate-400"> / </p>
+        <a class="hover:text-pink-400 text-slate-400 pl-1" href="/sigin">Đăng Nhập</a>
+    </div>
+    <div class="flex italic text-xl pt-3">
+        <i class="fa-solid fa-cart-shopping text-slate-500 text-2xl hover:text-pink-500"></i>
+        <p class="text-slate-400 pl-1 hover:text-pink-500">Giỏ Hàng</p>
+    </div>
+</div>
+<div class="max-w-screen-2xl m-auto pt-5">
+    <ul>
+        <li class="inline-block italic hover:text-pink-500 text-lg text-slate-500">SÁCH VĂN HỌC </li>
+        <li class="inline-block	pl-16 italic hover:text-pink-500 text-lg text-slate-500">SÁCH KINH TẾ</li>
+        <li class="inline-block	pl-16 italic hover:text-pink-500 text-lg text-slate-500">SÁCH THIẾU NHI </li>
+        <li class="inline-block	pl-16 italic hover:text-pink-500 text-lg text-slate-500">SÁCH TÂM LÝ</li>
+        <li class="inline-block	pl-16 italic hover:text-pink-500 text-lg text-slate-500">SÁCH GIAO KHOA</li>
+        <li class="inline-block	pl-16 italic hover:text-pink-500 text-lg text-slate-500">SALE OFF</li>
+    </ul>
+</div>
+<hr>
+<div class="max-w-screen-2xl m-auto pt-1">
+    <p class="pl-5 text-lg text-slate-500">Trang chủ -</p>
+    <button class="ml-5 border border-pink-400 pt-2 pl-7 pb-2 pr-7 mt-1 rounded-3xl text-pink-400">Bộ lọc</button>
+</div>
+<div class="max-w-screen-2xl m-auto pt-5 grid gap-4 grid-cols-3">
+    <div *ngIf="filteredProducts.length === 0" class="no-product">
+        No products found
+    </div>
+    <div class="p-4" *ngFor="let product of filteredProducts;">
+        <a href="/product/{{product._id}}">
+            <div class="image-container">
+                <img class="rounded-xl" [src]="product.img" alt="" width="492px" height="671px">
+            </div>
+            <span class="text-2xl italic text-zinc-500"><mark class="text-red-600 bg-white">{{ product.price
+                    }}</mark>$</span>
+            <p class="text-2xl italic hover:not-italic text-zinc-500">{{ product.name }}</p>
+        </a>
+    </div>
+</div>
+<hr>
+<div class="max-w-screen-2xl m-auto pt-7 text-center">
+    <ul>
+        <li class="inline-block pl-5 text-lg text-slate-500">CỬA HÀNG</li>
+        <li class="inline-block pl-16 text-lg text-slate-500">1900 6909</li>
+        <li class="inline-block pl-16 text-lg text-slate-500">CÔNG TY</li>
+        <li class="inline-block pl-16 text-lg text-slate-500">CHÍNH SÁCH KHÁCH HÀNG</li>
+        <li class="inline-block pl-16 text-lg text-slate-500">HỖ TRỢ</li>
+        <li class="inline-block pl-16 text-lg text-slate-500">PHƯƠNG THỨC THANH TOÁN</li>
+    </ul>
+    <p class="pt-7 text-slate-500">Công ty TNHH MTV Global Fashion. Văn phòng: Lầu 4 tòa nhà ACM số 96 Cao Thắng phường
+        04 quận 03 TP Hồ Chí Minh. <br>GP số <mark class="text-blue-500 bg-white">0392222222</mark> do sở KHĐT Tp Hồ Chí
+        Minh cấp lần đầu ngày 05/10/2017</p>
+</div>
