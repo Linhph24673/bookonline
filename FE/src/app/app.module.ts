@@ -1,28 +1,35 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AddProductComponent } from './component/pages/admin/add-product/add-product.component';
-import { ManagerProductComponent } from './component/pages/admin/manager-product/manager-product.component';
-import { UpdateProductComponent } from './component/pages/admin/update-product/update-product.component';
-import { DashboardComponent } from './component/pages/admin/dashboard/dashboard.component';
-import { HomepageComponent } from './component/pages/home/homepage/homepage.component';
-import { AdminlayoutComponent } from './component/layout/adminlayout/adminlayout/adminlayout.component';
+import { ProductAddComponent } from './component/product-add/product-add.component';
+import { ProductListComponent } from './component/product-list/product-list.component';
+import { ProductUpdateComponent } from './component/product-update/product-update.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { SigninComponent } from './pages/signin/signin.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddProductComponent,
-    ManagerProductComponent,
-    UpdateProductComponent,
-    DashboardComponent,
-    HomepageComponent,
-    AdminlayoutComponent
+    ProductAddComponent,
+    ProductListComponent,
+    ProductUpdateComponent,
+    HomePageComponent,
+    ProductDetailComponent,
+    SigninComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
