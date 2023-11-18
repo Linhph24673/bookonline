@@ -32,3 +32,53 @@ button[type="submit"] {
   border-radius: 8px;
 }
 
+/* Định dạng sản phẩm */
+.p-4 {
+  margin-bottom: 20px; /* Khoảng cách giữa các sản phẩm */
+  width: 80%; /* Đảm bảo sản phẩm rộng 100% chiều ngang */
+  text-align: center; /* Căn giữa nội dung trong sản phẩm */
+}
+
+a {
+  text-decoration: none; /* Loại bỏ gạch chân cho link */
+  color: #333; /* Màu văn bản cho link */
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng cho sản phẩm */
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.05); /* Phóng to hình ảnh khi di chuột vào */
+}
+
+.text-2xl {
+  font-size: 1.25rem; /* Kích thước văn bản */
+  margin-top: 8px; /* Khoảng cách từ giá tiền đến tên sản phẩm */
+}
+
+.italic {
+  font-style: italic; /* Chữ in nghiêng */
+}
+
+.text-red-600 {
+  color: #e53e3e; /* Màu đỏ */
+}
+
+.bg-white {
+  background-color: #fff; /* Màu nền trắng */
+}
+
+.hover\:not-italic:hover {
+  font-style: normal; /* Loại bỏ in nghiêng khi di chuột vào */
+}
