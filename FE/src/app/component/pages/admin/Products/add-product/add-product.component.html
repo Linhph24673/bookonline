@@ -1,0 +1,89 @@
+<form (ngSubmit)="AddProduct()" [formGroup]="productForm">
+  <h2>Thêm sản phẩm</h2>
+  <div class="detail">
+    <div class="images">
+      <!-- <input type="file"> -->
+      <input
+        type="text"
+        class="form-control"
+        formControlName="img"
+        placeholder="input image link"
+      />
+    </div>
+    <div class="detail-info">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Tên sản phẩm</label>
+        <input
+          type="email"
+          class="form-control"
+          formControlName="name"
+          placeholder="product name"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label"
+          >Giá sản phấm</label
+        >
+        <input
+          type="number"
+          class="form-control"
+          formControlName="price"
+          placeholder="product price"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label"
+          >Số lượng sản phấm</label
+        >
+        <input
+          type="number"
+          class="form-control"
+          formControlName="quantity"
+          placeholder="product price"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Danh mục sản phấm</label>
+        <!-- <input type="text" class="form-control" formControlName="categoryId" placeholder="product catrgory"> -->
+        <select formControlName="categoryId" class="form-select">
+          <option value="">Chọn danh mục</option>
+          <option *ngFor="let cate of category" value="{{ cate._id }}">
+            {{ cate.name }}
+          </option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Tác giả</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="author"
+          placeholder="author name"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label"
+          >Nhà xuất bản</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          formControlName="publishing"
+          placeholder="Nhà Xuất Bản"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label"
+          >Mô tả sản phấm</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          formControlName="description"
+          placeholder="product description"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary mb-3">Thêm mới</button>
+    </div>
+  </div>
+</form>
