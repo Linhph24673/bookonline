@@ -1,0 +1,104 @@
+<h1 class="text-center">Thông tin chi tiết sản phẩm</h1>
+<div class="detail my-5" *ngIf="product">
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="main-img">
+          <img class="img-fluid" src="{{ product.images?.[0].url }}" />
+          <!--                     <div class="row my-3 previews">
+                        <div class="col-md-3">
+                            <img class="w-100" src="https://cdn.pixabay.com/photo/2015/07/24/18/40/model-858754_960_720.jpg" alt="Sale">
+                        </div>
+                        <div class="col-md-3">
+                            <img class="w-100" src="https://cdn.pixabay.com/photo/2015/07/24/18/38/model-858749_960_720.jpg" alt="Sale">
+                        </div>
+                        <div class="col-md-3">
+                            <img class="w-100" src="https://cdn.pixabay.com/photo/2015/07/24/18/39/model-858751_960_720.jpg" alt="Sale">
+                        </div>
+                        <div class="col-md-3">
+                            <img class="w-100" src="https://cdn.pixabay.com/photo/2015/07/24/18/37/model-858748_960_720.jpg" alt="Sale">
+                        </div> -->
+          <!--                     </div> -->
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="main-description px-2">
+          <div class="category text-bold">
+            Category: {{ product.categoryId }}
+          </div>
+          <div class="product-title text-bold my-3">
+            <span></span><span> {{ product.name }}</span>
+          </div>
+
+          <div class="price-area my-4">
+            <div class="d-flex">
+              <h2 class="new-text text-bold">Price :</h2>
+              <h2 class="new-price text-bold text-danger">
+                {{ product.price }}
+              </h2>
+            </div>
+          </div>
+
+          <div class="buttons d-flex my-5">
+            <div class="block">
+              <a href="#" class="shadow btn custom-btn">Wishlist</a>
+            </div>
+            <div class="block">
+              <button class="shadow btn custom-btn">Add to cart</button>
+            </div>
+
+            <div class="block quantity">
+              <input
+                type="number"
+                class="form-control"
+                id="cart_quantity"
+                value="1"
+                min="0"
+                max="5"
+                placeholder="Enter email"
+                name="cart_quantity"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="product-details my-4">
+          <h3>Mô Tả</h3>
+          <p class="details-title text-color mb-1">{{ product.description }}</p>
+          <p class="description" *ngIf="product">
+            {{ product.description }}
+          </p>
+        </div>
+
+        <div class="delivery my-4">
+          <p class="font-weight-bold mb-0">
+            <span><i class="fa-solid fa-truck"></i></span>
+            <b>Tác giả</b>
+          </p>
+          <p class="text-secondary">{{ product.author }}</p>
+        </div>
+        <div class="delivery-options my-4">
+          <p class="font-weight-bold mb-0">
+            <span><i class="fa-solid fa-filter"></i></span>
+            <b>Nhà xuất bản</b>
+          </p>
+          <p class="text-secondary">{{ product.publishing }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="container similar-products my-4">
+        <hr>
+        <p class="display-5">Similar Products</p>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="similar-product">
+                    <img class="w-100" src="https://source.unsplash.com/gsKdPcIyeGg" alt="Preview">
+                    <p class="title">Lovely black dress</p>
+                    <p class="price">$100</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>

@@ -1,0 +1,18 @@
+<div class="container my-4">
+    <h1 class="text-center">Manager Category</h1>
+    <table class="table table-bordered text-center">
+      <thead>
+        <tr>
+          <th class="text-center" scope="col">STT</th>
+
+          <th class="text-center" scope="col">Category</th>
+          <th class="text-center" scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr app-category-item *ngFor="let category of categorys; let i = index" [category]="category" [index]="i" (onRemove)="removeItem(category._id)">
+        </tr>
+      </tbody>
+    </table>
+  </div>
+

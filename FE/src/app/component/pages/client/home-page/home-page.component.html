@@ -1,0 +1,118 @@
+<header class="py-5">
+  <div class="container-fluid">
+    <div class="banner">
+      <img
+        src="https://cdn0.fahasa.com/media/magentothem/banner7/NoelCMST1123_Slide_840x320.jpg"
+        alt=""
+      />
+    </div>
+    <div class="menu bg-black my-5 pb-5">
+      <div class="tiller">
+        <h1 class="text-center text-white pt-5">Sản Phẩm tại cửa hàng</h1>
+      </div>
+      <div
+        class="row align-items-center justify-content-center text-center my-5 pb-5"
+      >
+        <div class="col mx-4">
+          <div class="card bg-dark">
+            <div class="card-body">
+              <img
+                src="https://cdn0.fahasa.com/media/catalog/product/t/h/tham-tu-lung-danh-conan_bia_tap-101.jpg"
+                width="150px"
+                alt=""
+              />
+            </div>
+            <div class="card-text text-white">
+              <h3>Thám Tử Lừng Danh Conan - Tập 101</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col mx-4">
+          <div class="card bg-dark">
+            <div class="card-body">
+              <img
+                src="https://cdn0.fahasa.com/media/catalog/product/9/7/9781668009048bia.jpg"
+                width="150px"
+                alt=""
+              />
+            </div>
+            <div class="card-text text-white">
+              <h3>The Woman In Me</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col mx-4">
+          <div class="card bg-dark">
+            <div class="card-body">
+              <img
+                src="https://cdn0.fahasa.com/media/catalog/product/e/l/elonmusk_1_1.jpg"
+                width="150px"
+                alt=""
+              />
+            </div>
+            <div class="card-text text-white">
+              <h3>Tiểu Sử Elon Musk - Bản Đặc Biệt - Bìa Cứng AR</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col mx-4">
+          <div class="card bg-dark">
+            <div class="card-body">
+              <img
+                src="https://cdn0.fahasa.com/media/catalog/product/8/7/8794069302930.jpg"
+                width="150px"
+                alt=""
+              />
+            </div>
+            <div class="card-text text-white">
+              <h3>1000 Phát Minh & Khám Phá Vĩ Đại</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="">
+  <div class="tiller text-center">
+    <h1 class="text-center">NEW</h1>
+  </div>
+  <div class="container py-5 px-4 px-lg-5 mt-5">
+    <div
+      class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 d-flex flex-row"
+    >
+      <div class="col-md-4" *ngFor="let product of products">
+        <div class="col mb-5 flex-fill">
+          <div class="card h-100">
+            <!-- Product image-->
+            <img
+              class="card-img-top my-5"
+              src="{{ product.images[0].url }}"
+              alt="..."
+            />
+            <!-- Product details-->
+            <div class="card-body p-4">
+              <div class="text-center">
+                <!-- Product name-->
+                <h5 class="fw-bolder">{{ product.name }}</h5>
+                <!-- Product price-->
+                {{ product.price }}
+              </div>
+            </div>
+            <!-- Product actions-->
+            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+              <div class="text-center">
+                <a
+                  class="btn btn-outline-dark mt-auto"
+                  [routerLink]="['/products', product._id]"
+                  >View options</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

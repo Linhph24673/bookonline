@@ -1,0 +1,16 @@
+<div class="details my-4">
+  <h1>Thêm danh mục</h1>
+  <div class="detail-info">
+    <div class="mb-3">
+      <label for="name">Tên danh mục:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        [(ngModel)]="category.name"
+      />
+    </div>
+  </div>
+
+  <button class="btn btn-danger" (click)="addCategory()">Thêm</button>
+</div>
