@@ -1,0 +1,14 @@
+<td>{{ index + 1 }}</td>
+<td><img width="100" [src]="product.images[0].url" /></td>
+<td>{{ product.name }}</td>
+<td>{{ product.price }}</td>
+<td class="align-middle">{{product.categoryId?.name}}</td>
+<td [width]="370">{{ product.description | truncate: 20 }}</td>
+<td>
+    <a class="me-2" [routerLink]="['/manager/products',product._id,'update']">
+        <button class="btn btn-primary ms-2"> Update </button>
+      </a>
+  <button class="btn btn-danger" (click)="removeItem(product._id)">
+    Remove
+  </button>
+</td>

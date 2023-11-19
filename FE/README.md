@@ -1,6 +1,6 @@
-# FE
+# Bookstore
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
 
 ## Development server
 

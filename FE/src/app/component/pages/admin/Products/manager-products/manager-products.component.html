@@ -1,0 +1,30 @@
+<div class="container">
+  <div>
+    <h1>Quản lý sản phẩm</h1>
+    <a routerLink="/manager/addProduct">
+      <button class="btn btn-primary" type="submit">Thêm mới</button>
+    </a>
+  </div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">STT</th>
+        <th scope="col">Image</th>
+        <th scope="col">name</th>
+        <th scope="col">price</th>
+        <th class="text-center" scope="col">Category</th>
+        <th scope="col">description</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        app-product-item
+        *ngFor="let product of products; let i = index"
+        [product]="product"
+        [index]="i"
+        (onRemove)="removeItem(product._id)"
+      ></tr>
+    </tbody>
+  </table>
+</div>

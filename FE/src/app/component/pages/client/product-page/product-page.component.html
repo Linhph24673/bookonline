@@ -1,0 +1,50 @@
+<section style="background-color: #eee">
+  <div class="text-center container py-3 my-5">
+    <div class="tiller"><h1>Sản Phẩm</h1></div>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let product of products">
+        <div class="container py-5">
+          <div class="row justify-content-center">
+            <a
+              [routerLink]="['/products/', product._id]"
+              class="text-reset"
+              style="text-decoration: none"
+              ><div class="col-md-50 col-lg-30 col-xl-25">
+                <div class="card text-black">
+                  <i class="fab fa-apple fa-lg pt-3 pb-1 px-3 my-3"></i>
+                  <img
+                    src="{{ product.images[0].url }}"
+                    class="card-img-top"
+                    alt="Apple Computer"
+                  />
+                  <a href="#!">
+                    <div class="mask">
+                      <div
+                        class="d-flex justify-content-start align-items-end h-100"
+                      >
+                        <h5><span class="badge bg-primary ms-2">New</span></h5>
+                      </div>
+                    </div>
+                    <div class="hover-overlay">
+                      <div
+                        class="mask"
+                        style="background-color: rgba(251, 251, 251, 0.15)"
+                      ></div>
+                    </div>
+                  </a>
+                  <div class="card-body">
+                    <h3 class="card-title mb-3">{{ product.name }}</h3>
+                    <p>{{ product.description | truncate: 20 }}</p>
+                    <h6 class="mb-3 text-danger">{{ product.price }}</h6>
+                    <button class=""> Mua ngay</button>
+                  </div>
+                  
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+
+<td class="align-middle text-center">{{ index + 1 }}</td>
+<td class="align-middle">{{ category.name }}</td>
+
+<td class="align-middle">
+  <button class="btn btn-danger" (click)="confirmDelete(category._id)">
+    Remove
+  </button>
+  <a [routerLink]="['/admin/category',category._id,'update']">
+    <button class="btn btn-primary ms-2"> Update </button>
+  </a>
+</td>

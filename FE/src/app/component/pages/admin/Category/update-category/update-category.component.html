@@ -1,0 +1,12 @@
+<form (ngSubmit)="onHandleEditCa()" [formGroup]="categoryForm">  
+    <h1 class="my-4">Cập nhật sản phẩm</h1>
+    <div class="detail">
+        <div class="detail-info">
+            <div class="mb-3">
+                <label for="" class="form-label">Tên danh mục</label>
+                <input type="text" id="name" class="form-control" formControlName="name">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</form>
